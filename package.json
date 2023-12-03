@@ -1,13 +1,14 @@
+
 {
-    "dependencies": {
-"express": "*",
-"redis": "3.1.2"
-
-
-
-    } ,
+    "name": "your-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "home.js",
     "scripts": {
-        "start": "node home.js"
-
+      "start": "node home.js"
+    },
+    "dependencies": {
+      "mongoose": "^5.13.8"
     }
-}
+  }
+  

@@ -1,11 +1,13 @@
 version: '3'
 services:
-  redis:
-     image: 'redis'
-
   node:
     build: .
     ports:
-      - "8080:8080"
-    depends_on:
-      - redis
+      - "4000:4000"
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
